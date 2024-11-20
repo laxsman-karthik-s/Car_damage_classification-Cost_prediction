@@ -1,4 +1,5 @@
 # Car_damage_classification-Cost_prediction
+Note:read the instruction file carefully.
 ## Introduction
 Assessing car damage for insurance claims has often been a slow and inconsistent process, relying heavily on manual inspections that can lead to human error. Our project aims to change that by using advanced deep learning technologies to automate the detection of car damage and estimate repair costs. By harnessing the power of sophisticated RCNN models and data-driven methods, we offer a more efficient and reliable alternative to traditional damage assessment.
 ## Dataset Description
@@ -26,3 +27,8 @@ The final stage determines the specific region of the car affected by damage (e.
 A regression model is integrated with the RCNN pipeline to predict repair costs based on predefined mappings between damage severity, location, and real-world repair costs derived from the dataset.
 -	Output:
 The module provides a numerical estimate of the repair cost, offering actionable insights for insurance claims and repair decisions.
+## Conclusion
+The Car Damage Classification and Cost Prediction System developed in this project leverages advanced RCNN (Region Convolutional Neural Network) techniques to effectively identify car damages and estimate repair costs. The system consists of four main modules: car detection, damage detection, severity classification, and damage location identification. While the car and damage detection modules achieved impressive accuracies of 85.47% and 83.20%, respectively, the damage location identification module faced challenges, reaching only 60.08% due to overlapping damage areas and complex car shapes. RCNN proved to be superior to other models like YOLO, particularly for detailed object localization and severity estimation. Additionally, the integrated cost prediction feature, based on damage severity and location, provides valuable insights for real-time assessments in insurance and repair contexts. Overall, this project highlights the promising role of deep learning and computer vision in car damage assessment, though further enhancements in image resolution and training data could improve accuracy, especially in more complex tasks.
+## Sample Output
+![html](https://github.com/user-attachments/assets/563c7bec-ffb8-4b95-b200-2a35a87266f0)
+![html2](https://github.com/user-attachments/assets/401d8146-e597-44d5-b9e8-d27157bb7144)
