@@ -1,5 +1,5 @@
 # Car_damage_classification-Cost_prediction
-Note:read the instruction file carefully.
+Note: Read the instruction.md file carefully.
 ## Introduction
 Assessing car damage for insurance claims has often been a slow and inconsistent process, relying heavily on manual inspections that can lead to human error. Our project aims to change that by using advanced deep learning technologies to automate the detection of car damage and estimate repair costs. By harnessing the power of sophisticated RCNN models and data-driven methods, we offer a more efficient and reliable alternative to traditional damage assessment.
 ## Dataset Description
