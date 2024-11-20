@@ -27,6 +27,46 @@ The final stage determines the specific region of the car affected by damage (e.
 A regression model is integrated with the RCNN pipeline to predict repair costs based on predefined mappings between damage severity, location, and real-world repair costs derived from the dataset.
 -	Output:
 The module provides a numerical estimate of the repair cost, offering actionable insights for insurance claims and repair decisions.
+## Results
+The performance of the Car Damage Classification and Cost Prediction System, which consists of four modules, was evaluated using the RCNN (Region Convolutional Neural Network) model. The modules and their corresponding performance are discussed below:
+Modules Overview:
+1.	Car Detection (Module 1): Determines if the object in the image is a car.
+2.	Damage Detection (Module 2): Classifies whether the car is damaged or not.
+3.	Damage Severity Classification (Module 3): Determines the severity of the damage (e.g., minor, moderate, severe).
+4.	Damage Location Identification (Module 4): Identifies the specific region of the car (front, side, rear) affected by the damage.
+RCNN Model Performance:
+1.	Car Detection (Module 1):
+- Accuracy: 
+The RCNN model performed well in detecting whether the object in the image was a car or not. It accurately identified cars in a variety of settings, despite challenges such as varying lighting conditions, background complexity, and different car models.
+ 
+2.	Damage Detection (Module 2):
+- Accuracy: 
+The damage detection module performed with good accuracy, identifying whether a car was damaged or undamaged. However, some false positives were detected where undamaged cars were incorrectly classified as damaged, likely due to environmental factors (e.g., reflective surfaces or minor scratches).
+ 
+3.	Damage Severity Classification (Module 3):
+- Accuracy: 
+The severity classification module struggled in some cases to distinguish between minor and moderate damage, particularly for less obvious or smaller damages. It performed well in distinguishing severe damage, as the model was able to identify significant damage areas with higher confidence.
+ 
+4.	Damage Location Identification (Module 4):
+- Accuracy: 
+The location identification module, which uses RCNN to detect specific regions of the car (e.g., front, side, or rear), had the lowest accuracy among the four modules. This may be due to complex shapes or overlapping areas of damage, which made it difficult for the model to distinguish exact locations accurately.
+
+Results of Model comparison :
+A comparison of model performance metrics reveals the effectiveness of RCNN and YOLO in the Car Damage Classification and Cost Prediction system. With a training accuracy of 60.08%, RCNN outperformed YOLO, which achieved a training accuracy of 43%. Both models were assessed on their ability to detect car damage, classify its severity, and identify damage locations, with RCNN consistently providing better results. 
+ 
+Model Performance Analysis
+1.	RCNN Performance:
+o	RCNN demonstrated superior accuracy compared to YOLO, especially in detecting subtle damages and correctly classifying severity levels.
+o	The region-based analysis enabled RCNN to provide detailed spatial insights into damage locations, making it highly reliable for detailed assessments required in insurance and repair cost prediction.
+2.	YOLO Performance:
+o	While YOLO's speed and efficiency made it suitable for real-time applications, its overall accuracy was lower due to its grid-based approach, which occasionally missed finer details in damage patterns.
+o	Despite this, YOLO excelled in providing rapid assessments, which can be useful in scenarios demanding quick decisions.
+The results highlight RCNN’s effectiveness in achieving higher accuracy, making it the preferred model for detailed damage analysis and cost prediction. YOLO, while not as precise, offers unparalleled speed and efficiency, making it valuable for real-time applications such as preliminary assessments or field-based evaluations.
+The stark contrast in accuracy underscores the trade-off between precision and speed in model selection:
+o	RCNN is ideal for use cases demanding thorough analysis and accuracy, such as generating insurance reports or repair estimates.
+o	YOLO is suitable for scenarios where rapid assessments are prioritized, such as initial damage scans or customer-facing applications.
+These findings offer stakeholders clear insights into the applicability of each model and guide their selection based on specific use-case requirements.
+
 ## Conclusion
 The Car Damage Classification and Cost Prediction System developed in this project leverages advanced RCNN (Region Convolutional Neural Network) techniques to effectively identify car damages and estimate repair costs. The system consists of four main modules: car detection, damage detection, severity classification, and damage location identification. While the car and damage detection modules achieved impressive accuracies of 85.47% and 83.20%, respectively, the damage location identification module faced challenges, reaching only 60.08% due to overlapping damage areas and complex car shapes. RCNN proved to be superior to other models like YOLO, particularly for detailed object localization and severity estimation. Additionally, the integrated cost prediction feature, based on damage severity and location, provides valuable insights for real-time assessments in insurance and repair contexts. Overall, this project highlights the promising role of deep learning and computer vision in car damage assessment, though further enhancements in image resolution and training data could improve accuracy, especially in more complex tasks.
 ## Sample Output
